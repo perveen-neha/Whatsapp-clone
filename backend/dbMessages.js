@@ -2,7 +2,10 @@ import mongoose from 'mongoose'
 
 const whatsappSchema = mongoose.Schema({
     name:String,
-    message:String,
+    message:{
+        type:String,
+        required:true
+    },
     timeStamp:String,
     recieved:Boolean
 })
